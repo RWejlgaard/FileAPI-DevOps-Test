@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  app:
+    image: golang:1.6.1-alpine
+    volumes:
+      - .:/go/src/fileAPI
+    working_dir: /go/src/fileAPI
+    command: go run main.go
+    ports:
+      - "8080"
